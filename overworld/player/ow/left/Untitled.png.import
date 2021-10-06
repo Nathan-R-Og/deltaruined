@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/target.png-52c019dda84da6fc854650719104c4ec.stex"
+path="res://.import/Untitled.png-fc4ceca2a8ba56c23495d0f9fcfe4d50.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/target.png"
-dest_files=[ "res://.import/target.png-52c019dda84da6fc854650719104c4ec.stex" ]
+source_file="res://overworld/player/ow/left/Untitled.png"
+dest_files=[ "res://.import/Untitled.png-fc4ceca2a8ba56c23495d0f9fcfe4d50.stex" ]
 
 [params]
 

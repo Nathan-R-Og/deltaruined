@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/triangle_red.png-7e59b44ab34c43307382a9cac935a895.stex"
+path="res://.import/Untitled.png-47df4fd6482043d0a1dd64c8280ceb5c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/triangle_red.png"
-dest_files=[ "res://.import/triangle_red.png-7e59b44ab34c43307382a9cac935a895.stex" ]
+source_file="res://overworld/player/ow/upRight/Untitled.png"
+dest_files=[ "res://.import/Untitled.png-47df4fd6482043d0a1dd64c8280ceb5c.stex" ]
 
 [params]
 
