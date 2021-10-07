@@ -46,7 +46,7 @@ func _process(delta):
 func _option():
 	var i = 0
 	while i < amount:
-		var option = preload("res://textFunctions/option.tscn").instance()
+		var option = preload("res://overworld/textFunctions/option.tscn").instance()
 		$Options.add_child(option)
 		if amount < 4:
 			var clearance = (windowWidth/amount)

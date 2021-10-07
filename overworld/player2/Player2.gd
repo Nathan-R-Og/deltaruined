@@ -11,7 +11,6 @@ Uses the follow steering behavior
 
 onready var sprite = $PlayerSprite
 onready var target = get_node(target_path)
-onready var follow_hint = $FollowHint
 
 const ARRIVE_THRESHOLD = 100.0
 
@@ -24,8 +23,6 @@ var _velocity = Vector2.ZERO
 
 var direction = ""
 
-func _ready():
-	follow_hint.set_as_toplevel(true)
 
 
 func _physics_process(delta) -> void:

@@ -1,15 +1,15 @@
-extends CanvasLayer
+extends StaticBody2D
 
 
-var branch = ""
-var stringName = ""
+export var branch = ""
+export var stringName = ""
+onready var textStuff = $"/root/World/Hud/TextStuff"
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _ready():
+	textStuff.connect("doClose", self, "_on_TextStuff_doClose")
 
-func readyTextStuff(nodeAccess):
+func readyTextStuff(nodeAccess := self):
 	var iterateChildren = 0
 	while iterateChildren < data.stateArrayA.size():
 		var getNode = data.stateArrayA[iterateChildren][0]
@@ -18,9 +18,9 @@ func readyTextStuff(nodeAccess):
 			break
 		iterateChildren += 1
 	stringName = nodeAccess.name + branch
-	$TextStuff._doTextStuff(stringName, "res://scenes/eart/text/")
+	textStuff._doTextStuff(stringName, "res://overworld/scenes/eart/text/")
 
 func _on_TextStuff_doClose():
 	if stringName != "":
-		$TextStuff._defaultClose()
+		textStuff._defaultClose()
 		$"/root/World/Objects/Player".doing = false

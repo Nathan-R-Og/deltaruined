@@ -98,7 +98,7 @@ func _process(delta):
 	$RichTextLabel.visible_characters = chars
 
 #if next, move index up one and run text load again
-	if Input.is_action_just_pressed("accept") and dramaticWait == false:
+	if Input.is_action_just_pressed("accept1") and dramaticWait == false:
 		if index < dialogueArray.size() -1:
 			index += 1
 			_textRun()
@@ -111,7 +111,7 @@ func _process(delta):
 #if none of the conditions are met, typewrite a character(s)
 	if chars < $RichTextLabel.get_total_character_count():
 		if dramaticWait == false:
-			if not Input.is_action_just_pressed("accept"):
+			if not Input.is_action_just_pressed("accept1"):
 				chars += 1.0 * (charSpeed)
 
 

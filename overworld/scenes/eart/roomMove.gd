@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var direction = "down"
 
-
+export var playerId = 1
 var playerInput = Vector2()
 var playerXInput = 0.0
 var playerYInput = 0.0
@@ -31,11 +31,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if doing == false:
-		playerXInput = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-		playerYInput = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+		playerXInput = Input.get_action_strength("move_right" + String(playerId)) - Input.get_action_strength("move_left" + String(playerId))
+		playerYInput = Input.get_action_strength("move_down" + String(playerId)) - Input.get_action_strength("move_up" + String(playerId))
 		playerInput = Vector2(playerXInput, playerYInput)
 		playerVelocity = playerInput * speedScalar
-		print(direction)
 		
 		playerVelocity = move_and_slide(playerVelocity)
 
@@ -79,7 +78,7 @@ func _process(delta):
 			direction = "up"
 
 		
-		$PlayerSprite.animation == direction
+		$PlayerSprite.play(direction)
 
 
 	match direction:
@@ -100,9 +99,12 @@ func _process(delta):
 		"upLeft":
 			$interact.position = Vector2(-16,0)
 
-	if do != null and Input.is_action_just_pressed("accept") and doing == false:
+	if do != null and Input.is_action_just_pressed("accept" + String(playerId)) and doing == false:
 		doing = true
-		$"/root/World/Hud".readyTextStuff(do)
+		if do.name.find("Player") == -1:
+			do.readyTextStuff()
+		else:
+			do.get_node("textRun").readyTextStuff()
 
 
 func _on_interact_body_entered(body):

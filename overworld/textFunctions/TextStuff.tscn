@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://overworld/textFunctions/Node2D.gd" type="Script" id=1]
-[ext_resource path="res://text/Standard.tres" type="DynamicFont" id=2]
 [ext_resource path="res://overworld/textFunctions/Choices.gd" type="Script" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=1]
@@ -31,7 +30,6 @@ margin_left = 8.5636
 margin_top = 413.324
 margin_right = 958.564
 margin_bottom = 531.324
-custom_fonts/mono_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
