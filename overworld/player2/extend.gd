@@ -7,7 +7,8 @@ onready var textStuff = $"/root/World/Hud/TextStuff"
 
 
 func _ready():
-	textStuff.connect("doClose", self, "_on_TextStuff_doClose")
+	if textStuff != null:
+		textStuff.connect("doClose", self, "_on_TextStuff_doClose")
 
 func readyTextStuff(nodeAccess := self):
 	var iterateChildren = 0

@@ -16,15 +16,21 @@ script = ExtResource( 3 )
 
 [node name="Player2" parent="Objects" instance=ExtResource( 4 )]
 position = Vector2( 577.485, 285.676 )
-target_path = NodePath("../Player")
+record = 24
+MainPath = NodePath("../Player")
+TweenNode = NodePath("../Player")
 
 [node name="Player3" parent="Objects" instance=ExtResource( 4 )]
 position = Vector2( 731.811, 323.134 )
-target_path = NodePath("../Player2")
+record = 48
+MainPath = NodePath("../Player")
+TweenNode = NodePath("../Player2")
 
 [node name="Player4" parent="Objects" instance=ExtResource( 4 )]
 position = Vector2( 504.068, 358.344 )
-target_path = NodePath("../Player3")
+record = 72
+MainPath = NodePath("../Player")
+TweenNode = NodePath("../Player3")
 
 [node name="object" type="StaticBody2D" parent="Objects"]
 position = Vector2( 336.842, 191.869 )

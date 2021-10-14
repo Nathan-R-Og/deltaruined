@@ -16,6 +16,12 @@ var doing = false
 var doable = false
 
 
+var recording = true
+var recordX = []
+var recordY = []
+var recordSize = 256
+
+var moving = false
 
 
 
@@ -25,7 +31,14 @@ var doable = false
 
 
 func _ready():
-	pass # Replace with function body.
+	# partyMember playerInput to source from
+	recordX.resize(recordSize)
+	recordY.resize(recordSize)
+	var iterater = 0
+	while iterater < recordSize - 1:
+		recordX[iterater] = position.x
+		recordY[iterater] = position.y
+		iterater += 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,8 +50,6 @@ func _process(delta):
 		playerVelocity = playerInput * speedScalar
 		
 		playerVelocity = move_and_slide(playerVelocity)
-
-
 
 		if playerInput.x > 0 and playerInput.y > 0:
 			if playerInput.x == playerInput.y:
@@ -105,6 +116,27 @@ func _process(delta):
 			do.readyTextStuff()
 		else:
 			do.get_node("textRun").readyTextStuff()
+
+
+
+
+	if playerVelocity != Vector2(0,0):
+		moving = true
+	else:
+		moving = false
+
+
+	if recording == true:
+		if position.x != recordX[0] or position.y != recordY[0]:
+			var shift = recordSize - 2
+			while shift > 0:
+				recordX[shift] = recordX[shift - 1]
+				recordY[shift] = recordY[shift - 1]
+				shift -= 1
+			recordX[0] = position.x
+			recordY[0] = position.y
+
+
 
 
 func _on_interact_body_entered(body):

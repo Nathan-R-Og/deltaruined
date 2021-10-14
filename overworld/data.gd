@@ -5,16 +5,7 @@ var stateArrayA = []
 var stateArrayB = []
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-	#_cacheStates()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
+#to convserve object states on exit of scenes and game
 
 func _cacheStates():
 	var iterateChildren = 0
