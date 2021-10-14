@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://overworld/player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://overworld/scenes/eart/objectSetDepth.gd" type="Script" id=3]
+[ext_resource path="res://overworld/player2/Player2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://overworld/textFunctions/TextStuff.tscn" type="PackedScene" id=5]
+[ext_resource path="res://overworld/scenes/eart/textStuff.gd" type="Script" id=6]
+
+[node name="World" type="Node2D"]
+
+[node name="Objects" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Player" parent="Objects" instance=ExtResource( 1 )]
+
+[node name="Player2" parent="Objects" instance=ExtResource( 4 )]
+position = Vector2( 577.485, 285.676 )
+record = 24
+MainPath = NodePath("../Player")
+TweenNode = NodePath("../Player")
+
+[node name="Player3" parent="Objects" instance=ExtResource( 4 )]
+position = Vector2( 731.811, 323.134 )
+record = 48
+MainPath = NodePath("../Player")
+TweenNode = NodePath("../Player2")
+
+[node name="Player4" parent="Objects" instance=ExtResource( 4 )]
+position = Vector2( 504.068, 358.344 )
+record = 72
+MainPath = NodePath("../Player")
+TweenNode = NodePath("../Player3")
+
+[node name="object" type="StaticBody2D" parent="Objects"]
+position = Vector2( 336.842, 191.869 )
+scale = Vector2( 100, 64 )
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/object"]
+polygon = PoolVector2Array( 1, 0, 1, 1, -1, 1, -1, 0 )
+
+[node name="MeshInstance2D" type="Sprite" parent="Objects/object"]
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 2 )
+
+[node name="object_Interact" type="StaticBody2D" parent="Objects"]
+position = Vector2( 662.135, 194.51 )
+scale = Vector2( 32, 32 )
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/object_Interact"]
+polygon = PoolVector2Array( 1, 0, 1, 1, -1, 1, -1, 0 )
+
+[node name="MeshInstance2D" type="Sprite" parent="Objects/object_Interact"]
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 2 )
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="rigid" type="StaticBody2D" parent="World"]
+position = Vector2( 562.495, 55.8927 )
+scale = Vector2( 500, 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/rigid"]
+polygon = PoolVector2Array( 1, -1, 1, 1, -1, 1, -1, -1 )
+
+[node name="MeshInstance2D" type="Sprite" parent="World/rigid"]
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 2 )
+
+[node name="rigid2" type="StaticBody2D" parent="World"]
+position = Vector2( 93.9474, 208.111 )
+scale = Vector2( 16, 500 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/rigid2"]
+polygon = PoolVector2Array( 1, -1, 1, 1, -1, 1, -1, -1 )
+
+[node name="MeshInstance2D" type="Sprite" parent="World/rigid2"]
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 2 )
+
+[node name="rigid3" type="StaticBody2D" parent="World"]
+position = Vector2( 888.338, 217.625 )
+scale = Vector2( 16, 500 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/rigid3"]
+polygon = PoolVector2Array( 1, -1, 1, 1, -1, 1, -1, -1 )
+
+[node name="MeshInstance2D" type="Sprite" parent="World/rigid3"]
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 2 )
+
+[node name="rigid4" type="StaticBody2D" parent="World"]
+position = Vector2( 503.035, 498.278 )
+scale = Vector2( 500, 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/rigid4"]
+polygon = PoolVector2Array( 1, -1, 1, 1, -1, 1, -1, -1 )
+
+[node name="MeshInstance2D" type="Sprite" parent="World/rigid4"]
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 2 )
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="TextStuff" parent="Hud" instance=ExtResource( 5 )]
