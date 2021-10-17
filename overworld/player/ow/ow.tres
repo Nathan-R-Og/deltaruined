@@ -1,44 +1,41 @@
-[gd_resource type="SpriteFrames" load_steps=9 format=2]
+[gd_resource type="SpriteFrames" load_steps=21 format=2]
 
 [ext_resource path="res://overworld/player/ow/downLeft/Untitled.png" type="Texture" id=1]
 [ext_resource path="res://overworld/player/ow/downRight/Untitled.png" type="Texture" id=2]
-[ext_resource path="res://overworld/player/ow/down/Untitled.png" type="Texture" id=3]
-[ext_resource path="res://overworld/player/ow/right/Untitled.png" type="Texture" id=4]
-[ext_resource path="res://overworld/player/ow/left/Untitled.png" type="Texture" id=5]
-[ext_resource path="res://overworld/player/ow/up/Untitled.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/kris/lw/up/1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/kris/lw/up/2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/kris/lw/up/0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/kris/lw/right/1.png" type="Texture" id=6]
 [ext_resource path="res://overworld/player/ow/upLeft/Untitled.png" type="Texture" id=7]
 [ext_resource path="res://overworld/player/ow/upRight/Untitled.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/kris/lw/right/2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/kris/lw/right/0.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/kris/lw/right/3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/kris/lw/down/3.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/kris/lw/left/0.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/kris/lw/left/1.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/kris/lw/left/2.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/kris/lw/left/3.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/kris/lw/down/2.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/kris/lw/down/1.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/kris/lw/down/0.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/kris/lw/up/3.png" type="Texture" id=20]
 
 [resource]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "up",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "downRight",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "upRight",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
@@ -49,5 +46,20 @@ animations = [ {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "upLeft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "up",
 "speed": 5.0
 } ]
