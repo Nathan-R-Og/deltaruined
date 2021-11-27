@@ -1,0 +1,546 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://battle/pla.gd" type="Script" id=1]
+[ext_resource path="res://battle/battleController.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://battle/example.png" type="Texture" id=4]
+[ext_resource path="res://battle/example3.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32.4523, 33.4189 )
+
+[sub_resource type="Animation" id=3]
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("arenaA:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -256, -256, 256, -256, 256, 256, -256, 256 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arenaA2:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -272, -272, 272, -272, 272, 272, -272, 272, -272, -272, -256, -256, -256, 256, 256, 256, 256, -256, -256, -256 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("arenaA:invert_border")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 16.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 480, 300 ), Vector2( 900, 300 ), Vector2( 480, 300 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 4, 6, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 180.0, 270.0, 360.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="Animation" id=5]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerInfoLayer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 0.784584, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 64 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerInfoLayer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 0.707107, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 64 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerInfoLayer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 0.784584, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 64 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerInfoLayer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 0.707107, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 64 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerInfoLayer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 0.784584, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 64 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerInfoLayer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 0.707107, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 64 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="StreamTexture" id=11]
+flags = 4
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Players" type="Node" parent="."]
+
+[node name="pos" type="Node" parent="Players"]
+
+[node name="1" type="Position2D" parent="Players/pos"]
+position = Vector2( 91.0102, 145.336 )
+
+[node name="2" type="Position2D" parent="Players/pos"]
+position = Vector2( 91.0102, 272.692 )
+
+[node name="3" type="Position2D" parent="Players/pos"]
+position = Vector2( 82.0203, 437.506 )
+
+[node name="The" type="Node" parent="Players"]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="pos" type="Node" parent="Enemies"]
+
+[node name="1" type="Position2D" parent="Enemies/pos"]
+position = Vector2( 1103.17, 143.091 )
+
+[node name="2" type="Position2D" parent="Enemies/pos"]
+position = Vector2( 1103.17, 270.447 )
+
+[node name="3" type="Position2D" parent="Enemies/pos"]
+position = Vector2( 1103.17, 435.261 )
+
+[node name="The" type="Node" parent="Enemies"]
+
+[node name="pla" type="KinematicBody2D" parent="."]
+visible = false
+position = Vector2( 621.998, 321.302 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="pl" type="AnimatedSprite" parent="pla"]
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pla"]
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 585, 300 )
+rotation = 0.785398
+
+[node name="arenaA" type="Polygon2D" parent="StaticBody2D"]
+invert_enable = true
+invert_border = 16.0
+polygon = PoolVector2Array( -256, -256, 256, -256, 256, 256, -256, 256 )
+
+[node name="arenaA2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -272, -272, 272, -272, 272, 272, -272, 272, -272, -272, -256, -256, -256, 256, 256, 256, 256, -256, -256, -256 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D"]
+anims/1 = SubResource( 3 )
+
+[node name="Control" type="CanvasLayer" parent="."]
+
+[node name="example" type="Sprite" parent="Control"]
+modulate = Color( 1, 1, 1, 0.215686 )
+position = Vector2( 213, 658 )
+texture = ExtResource( 4 )
+
+[node name="P1" type="Node2D" parent="Control"]
+position = Vector2( 213, 627 )
+
+[node name="Menu" type="Node2D" parent="Control/P1"]
+
+[node name="FIGHT" type="Sprite" parent="Control/P1/Menu"]
+position = Vector2( -192, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="ACT" type="Sprite" parent="Control/P1/Menu"]
+position = Vector2( -160, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="ITEM" type="Sprite" parent="Control/P1/Menu"]
+position = Vector2( -128, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="SPARE" type="Sprite" parent="Control/P1/Menu"]
+position = Vector2( -96, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="DEFEND" type="Sprite" parent="Control/P1/Menu"]
+position = Vector2( -64, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="PlayerInfoLayer" type="Node2D" parent="Control/P1"]
+
+[node name="icon" type="Sprite" parent="Control/P1/PlayerInfoLayer"]
+position = Vector2( -160, 0 )
+texture = ExtResource( 3 )
+
+[node name="name" type="Label" parent="Control/P1/PlayerInfoLayer"]
+margin_left = -109.102
+margin_top = -22.009
+margin_right = -6.10199
+margin_bottom = 23.991
+text = "DEEZ NUTS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Node2D" parent="Control/P1/PlayerInfoLayer"]
+
+[node name="current" type="Label" parent="Control/P1/PlayerInfoLayer/Health"]
+margin_left = 47.6939
+margin_top = -27.189
+margin_right = 117.694
+margin_bottom = -1.18896
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="max" type="Label" parent="Control/P1/PlayerInfoLayer/Health"]
+margin_left = 137.036
+margin_top = -30.0079
+margin_right = 207.036
+margin_bottom = 1.99213
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Node2D" parent="Control/P1/PlayerInfoLayer/Health"]
+position = Vector2( 119, 12 )
+
+[node name="bar_max" type="MeshInstance2D" parent="Control/P1/PlayerInfoLayer/Health/bar"]
+modulate = Color( 0.501961, 0, 0, 1 )
+scale = Vector2( 76, 9 )
+mesh = SubResource( 4 )
+
+[node name="bar_current" type="MeshInstance2D" parent="Control/P1/PlayerInfoLayer/Health/bar"]
+modulate = Color( 0.603922, 0.603922, 0.603922, 1 )
+scale = Vector2( 76, 9 )
+mesh = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/P1"]
+anims/Lower = SubResource( 5 )
+anims/Reveal = SubResource( 6 )
+
+[node name="P2" type="Node2D" parent="Control"]
+position = Vector2( 639, 627 )
+
+[node name="Menu" type="Node2D" parent="Control/P2"]
+
+[node name="FIGHT" type="Sprite" parent="Control/P2/Menu"]
+position = Vector2( -192, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="MAGIC" type="Sprite" parent="Control/P2/Menu"]
+position = Vector2( -160, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="ITEM" type="Sprite" parent="Control/P2/Menu"]
+position = Vector2( -128, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="SPARE" type="Sprite" parent="Control/P2/Menu"]
+position = Vector2( -96, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="DEFEND" type="Sprite" parent="Control/P2/Menu"]
+position = Vector2( -64, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="PlayerInfoLayer" type="Node2D" parent="Control/P2"]
+
+[node name="icon" type="Sprite" parent="Control/P2/PlayerInfoLayer"]
+position = Vector2( -160, 0 )
+texture = ExtResource( 3 )
+
+[node name="name" type="Label" parent="Control/P2/PlayerInfoLayer"]
+margin_left = -109.102
+margin_top = -22.009
+margin_right = -6.102
+margin_bottom = 23.991
+text = "DEEZ NUTS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Node2D" parent="Control/P2/PlayerInfoLayer"]
+
+[node name="current" type="Label" parent="Control/P2/PlayerInfoLayer/Health"]
+margin_left = 47.6939
+margin_top = -27.189
+margin_right = 117.694
+margin_bottom = -1.18896
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="max" type="Label" parent="Control/P2/PlayerInfoLayer/Health"]
+margin_left = 137.036
+margin_top = -30.0079
+margin_right = 207.036
+margin_bottom = 1.99213
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Node2D" parent="Control/P2/PlayerInfoLayer/Health"]
+position = Vector2( 119, 12 )
+
+[node name="bar_max" type="MeshInstance2D" parent="Control/P2/PlayerInfoLayer/Health/bar"]
+modulate = Color( 0.501961, 0, 0, 1 )
+scale = Vector2( 76, 9 )
+mesh = SubResource( 4 )
+
+[node name="bar_current" type="MeshInstance2D" parent="Control/P2/PlayerInfoLayer/Health/bar"]
+modulate = Color( 0.603922, 0.603922, 0.603922, 1 )
+scale = Vector2( 76, 9 )
+mesh = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/P2"]
+anims/Lower = SubResource( 7 )
+anims/Reveal = SubResource( 8 )
+
+[node name="P3" type="Node2D" parent="Control"]
+position = Vector2( 1065, 627 )
+
+[node name="Menu" type="Node2D" parent="Control/P3"]
+
+[node name="FIGHT" type="Sprite" parent="Control/P3/Menu"]
+position = Vector2( -192, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="MAGIC" type="Sprite" parent="Control/P3/Menu"]
+position = Vector2( -160, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="ITEM" type="Sprite" parent="Control/P3/Menu"]
+position = Vector2( -128, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="SPARE" type="Sprite" parent="Control/P3/Menu"]
+position = Vector2( -96, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="DEFEND" type="Sprite" parent="Control/P3/Menu"]
+position = Vector2( -64, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="PlayerInfoLayer" type="Node2D" parent="Control/P3"]
+
+[node name="icon" type="Sprite" parent="Control/P3/PlayerInfoLayer"]
+position = Vector2( -160, 0 )
+texture = ExtResource( 3 )
+
+[node name="name" type="Label" parent="Control/P3/PlayerInfoLayer"]
+margin_left = -109.102
+margin_top = -22.009
+margin_right = -6.102
+margin_bottom = 23.991
+text = "DEEZ NUTS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Node2D" parent="Control/P3/PlayerInfoLayer"]
+
+[node name="current" type="Label" parent="Control/P3/PlayerInfoLayer/Health"]
+margin_left = 47.6939
+margin_top = -27.189
+margin_right = 117.694
+margin_bottom = -1.18896
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="max" type="Label" parent="Control/P3/PlayerInfoLayer/Health"]
+margin_left = 137.036
+margin_top = -30.0079
+margin_right = 207.036
+margin_bottom = 1.99213
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Node2D" parent="Control/P3/PlayerInfoLayer/Health"]
+position = Vector2( 119, 12 )
+
+[node name="bar_max" type="MeshInstance2D" parent="Control/P3/PlayerInfoLayer/Health/bar"]
+modulate = Color( 0.501961, 0, 0, 1 )
+scale = Vector2( 76, 9 )
+mesh = SubResource( 4 )
+
+[node name="bar_current" type="MeshInstance2D" parent="Control/P3/PlayerInfoLayer/Health/bar"]
+modulate = Color( 0.603922, 0.603922, 0.603922, 1 )
+scale = Vector2( 76, 9 )
+mesh = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/P3"]
+anims/Lower = SubResource( 9 )
+anims/Reveal = SubResource( 10 )
+
+[node name="MBox" type="Node2D" parent="Control"]
+position = Vector2( 640, 842 )
+
+[node name="example2" type="Sprite" parent="Control/MBox"]
+modulate = Color( 1, 1, 1, 0.14902 )
+texture = SubResource( 11 )
+
+[node name="EnemyStats" type="Node2D" parent="Control/MBox"]
+
+[node name="NAV" type="Sprite" parent="Control/MBox"]
+position = Vector2( -514, -56 )
+texture = ExtResource( 6 )
