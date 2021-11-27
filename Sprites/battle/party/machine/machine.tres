@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=2]
+
+[ext_resource path="res://Sprites/battle/party/machine/sleep.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/battle/party/machine/act.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/battle/party/machine/tech.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/battle/party/machine/defend.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/battle/party/machine/normal.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/battle/party/machine/attack.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/battle/party/machine/spare.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/battle/party/machine/hurt.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/battle/party/machine/select.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/battle/party/machine/item.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/battle/party/machine/stone.png" type="Texture" id=11]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "item",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "select",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "sleep",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "tech",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "spare",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "stone",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "defend",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "act",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "attack",
+"speed": 5.0
+} ]
