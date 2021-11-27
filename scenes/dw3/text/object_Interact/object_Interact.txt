@@ -1,0 +1,2 @@
+s
+{/animation1=think}Seems to not be working. (like this demo lol){/animFX=stop}

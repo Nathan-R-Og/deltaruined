@@ -1,0 +1,212 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://overworld/World Camera.gd" type="Script" id=1]
+[ext_resource path="res://scenes/textStuff.gd" type="Script" id=2]
+[ext_resource path="res://scenes/warps.gd" type="Script" id=3]
+[ext_resource path="res://scenes/objectSetDepth.gd" type="Script" id=4]
+[ext_resource path="res://scenes/dw3/room_dark3.png" type="Texture" id=5]
+[ext_resource path="res://overworld/player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://textFunctions/TextStuff.tscn" type="PackedScene" id=7]
+[ext_resource path="res://icon.png" type="Texture" id=8]
+
+[node name="World" type="Node2D"]
+
+[node name="room_dark3" type="Sprite" parent="."]
+position = Vector2( 1820, 260 )
+texture = ExtResource( 5 )
+
+[node name="Objects" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Player" parent="Objects" instance=ExtResource( 6 )]
+position = Vector2( 164.465, 236.726 )
+
+[node name="object" type="StaticBody2D" parent="Objects"]
+position = Vector2( 735.042, -25.1053 )
+scale = Vector2( 100, 64 )
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/object"]
+polygon = PoolVector2Array( 1, 0, 1, 1, -1, 1, -1, 0 )
+
+[node name="MeshInstance2D" type="Sprite" parent="Objects/object"]
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 8 )
+
+[node name="object_Interact" type="StaticBody2D" parent="Objects"]
+position = Vector2( 906.653, -29.8903 )
+scale = Vector2( 32, 32 )
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/object_Interact"]
+polygon = PoolVector2Array( 1, 0, 1, 1, -1, 1, -1, 0 )
+
+[node name="MeshInstance2D" type="Sprite" parent="Objects/object_Interact"]
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 8 )
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="World"]
+position = Vector2( 320, 240 )
+current = true
+script = ExtResource( 1 )
+
+[node name="rigid" type="StaticBody2D" parent="World"]
+position = Vector2( 320, 140 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 860, 360 )
+polygon = PoolVector2Array( 380, -20, 380, 20, -380, 20, -380, -20 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 220, 240 )
+polygon = PoolVector2Array( 260, -20, 260, 20, -260, 20, -260, -20 )
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1640, 80 )
+polygon = PoolVector2Array( 280, -20, 280, 20, -280, 20, -280, -20 )
+
+[node name="CollisionPolygon2D27" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 3080, 160 )
+polygon = PoolVector2Array( 240, -20, 240, 20, -240, 20, -240, -20 )
+
+[node name="CollisionPolygon2D28" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 2600, 240 )
+polygon = PoolVector2Array( 240, -20, 240, 20, -240, 20, -240, -20 )
+
+[node name="CollisionPolygon2D29" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 2600, 320 )
+polygon = PoolVector2Array( 320, -20, 320, 20, -320, 20, -320, -20 )
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 860, 240 )
+polygon = PoolVector2Array( 300, -20, 300, 20, -300, 20, -300, -20 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 300, 120 )
+polygon = PoolVector2Array( 260, -20, 260, 20, -260, 20, -260, -20 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1260, 160 )
+polygon = PoolVector2Array( 100, -20, 100, 20, -100, 20, -100, -20 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1360, 280 )
+polygon = PoolVector2Array( 120, -20, 120, 20, -120, 20, -120, -20 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( -140, 40 )
+polygon = PoolVector2Array( 180, -20, 180, 20, -180, 20, -180, -20 )
+
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1640, 200 )
+polygon = PoolVector2Array( 200, -20, 200, 20, -200, 20, -200, -20 )
+
+[node name="CollisionPolygon2D26" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 3120, 280 )
+polygon = PoolVector2Array( 200, -20, 200, 20, -200, 20, -200, -20 )
+
+[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 2060, 280 )
+polygon = PoolVector2Array( 220, -20, 220, 20, -220, 20, -220, -20 )
+
+[node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 2140, 160 )
+polygon = PoolVector2Array( 220, -20, 220, 20, -220, 20, -220, -20 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( -180, 160 )
+polygon = PoolVector2Array( 140, -20, 140, 20, -140, 20, -140, -20 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( -60, 200 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 60, 80 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 460, 280 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1140, 200 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1260, 320 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1340, 120 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1820, 240 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1820, 280 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1940, 120 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 2380, 200 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 2820, 200 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 1460, 240 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 580, 160 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 580, 200 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="World/rigid"]
+position = Vector2( 460, 320 )
+polygon = PoolVector2Array( -20, -20, 20, -20, 20, 20, -20, 20 )
+
+[node name="cameraStart" type="Position2D" parent="World"]
+
+[node name="cameraEnd" type="Position2D" parent="World"]
+position = Vector2( 3640, 520 )
+
+[node name="Warps" type="Node2D" parent="World"]
+script = ExtResource( 3 )
+warps = [ "res://scenes/dw2/dw2.tscn", "res://scenes/dw4/dw4.tscn" ]
+links = [ 1, 0 ]
+
+[node name="Warp1" type="Area2D" parent="World/Warps"]
+position = Vector2( -11, 240 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="World/Warps/Warp1"]
+polygon = PoolVector2Array( -20, -40, 20, -40, 20, 40, -20, 40 )
+
+[node name="LoadPlace" type="Position2D" parent="World/Warps/Warp1"]
+position = Vector2( 42, -22 )
+
+[node name="Warp2" type="Area2D" parent="World/Warps"]
+position = Vector2( 3651, 360 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="World/Warps/Warp2"]
+polygon = PoolVector2Array( -20, -40, 20, -40, 20, 40, -20, 40 )
+
+[node name="LoadPlace" type="Position2D" parent="World/Warps/Warp2"]
+position = Vector2( -63, -32 )
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="TextStuff" parent="Hud" instance=ExtResource( 7 )]
